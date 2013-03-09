@@ -1,0 +1,126 @@
+﻿#FlashCardContainer {
+    background-color:#C8C8C8;
+    margin-top:100px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:100px;
+    width: 250px;
+    height:420px;
+    padding-top: 10px;
+    border-style:double;
+    padding: 16px;
+    border-width:1px;
+    text-align:center;    
+    border-radius: 15px;
+}
+.FirstNumber {
+    font-size: 60pt;
+    font-weight:bold;
+}
+.MathSymbol {
+    float:left;
+    font-size: 60pt;
+    margin-left:10px;
+    margin-top:15px;
+}
+.SecondNumber {
+    margin-right:52px;
+    margin-left:auto;
+    margin-top:10px;
+    font-size: 60pt;
+    font-weight:bold;
+}
+.Answer {
+    Height: 100px;
+    width:200px;
+    background-color:#E0E0E0;
+    font-size: 50pt;
+    text-align:center;
+}
+.WrongAnswer {
+    Height: 100px;
+    width:200px;
+    background-color:#E0E0E0;
+    font-size: 50pt;
+    text-align:center;
+    color:red;
+}
+hr {
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 90%;
+    margin-bottom:30px;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #585858 ;
+    display: block;
+}
+.Validation {
+    color:red;
+}
+.Flash-Card-btn-Submit {
+    margin-top: 20px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #b0a9b0) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #b0a9b0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#b0a9b0');
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#404040;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}.Flash-Card-btn-Submit:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #b0a9b0), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #b0a9b0 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b0a9b0', endColorstr='#ededed');
+	background-color:#b0a9b0;
+}.Flash-Card-btn-Submit:active {
+	position:relative;
+	top:1px;
+}
+ .Flash-Card-btn-Options {
+    margin-top: 20px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #b0a9b0) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #b0a9b0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#b0a9b0');
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#404040;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+    padding-left: 6px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+    width: 65px;
+    height: 20px;
+}.Flash-Card-btn-Options:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #b0a9b0), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #b0a9b0 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b0a9b0', endColorstr='#ededed');
+	background-color:#b0a9b0;
+}.Flash-Card-btn-Options:active {
+	position:relative;
+	top:1px;
+}.Options-Button {
+     float: right;
+     margin-right: 20px
+ }

@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MathHelper.master.cs" Inherits="MathHelper.Shared.MathHelper" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="/Style/MathHelper.css" type="text/css" /> 
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Container">
+        <div id="Header">
+            <div id="HeaderLinks">
+
+                
+
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent"  runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <hr/>
+        <div id="footer">Copyright 2013 by Andy's Programs</div>
+    </div>
+    </form>
+    
+</body>
+</html>
