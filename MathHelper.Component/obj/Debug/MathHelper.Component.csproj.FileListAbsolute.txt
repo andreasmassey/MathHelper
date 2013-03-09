@@ -1,0 +1,9 @@
+E:\Development\C Sharp\MathHelper\MathHelper.Component\bin\Debug\MathHelper.Component.dll
+E:\Development\C Sharp\MathHelper\MathHelper.Component\bin\Debug\MathHelper.Component.pdb
+E:\Development\C Sharp\MathHelper\MathHelper.Component\obj\Debug\MathHelper.Component.dll
+E:\Development\C Sharp\MathHelper\MathHelper.Component\obj\Debug\MathHelper.Component.pdb
+F:\Development\C Sharp\MathHelper\MathHelper.Component\bin\Debug\MathHelper.Component.dll
+F:\Development\C Sharp\MathHelper\MathHelper.Component\bin\Debug\MathHelper.Component.pdb
+F:\Development\C Sharp\MathHelper\MathHelper.Component\obj\Debug\MathHelper.Component.csprojResolveAssemblyReference.cache
+F:\Development\C Sharp\MathHelper\MathHelper.Component\obj\Debug\MathHelper.Component.dll
+F:\Development\C Sharp\MathHelper\MathHelper.Component\obj\Debug\MathHelper.Component.pdb

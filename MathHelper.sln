@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathHelper.UI", "MathHelper\MathHelper.UI.csproj", "{AAB7BB46-E969-4BB6-ACCC-9F254E5E1EE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathHelper.Component", "MathHelper.Component\MathHelper.Component.csproj", "{468374C8-0416-4FBB-9E4E-942EDC613F4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAB7BB46-E969-4BB6-ACCC-9F254E5E1EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB7BB46-E969-4BB6-ACCC-9F254E5E1EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB7BB46-E969-4BB6-ACCC-9F254E5E1EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB7BB46-E969-4BB6-ACCC-9F254E5E1EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468374C8-0416-4FBB-9E4E-942EDC613F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468374C8-0416-4FBB-9E4E-942EDC613F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468374C8-0416-4FBB-9E4E-942EDC613F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468374C8-0416-4FBB-9E4E-942EDC613F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
