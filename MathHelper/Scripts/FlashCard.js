@@ -47,48 +47,22 @@ function Options() {
 }
 
 ShowPopUp = function (symbol, maxNumber) {
-    //var height = 1000;
-    //var width = 1000;
-    //var left = ((document.body.clientWidth - width) / 2);
-    //var _symbol = symbol;
-    //var _maxNumber = maxNumber;
-    //var url = '/FlashCard/Options';
-    //window.open(url, 'DisplayProfile_1', 'resizable=1,width' + width + ',height=' + height + ',toolbar=0,resizable=1,top=0,left=' + left);
-
-    //$.ajax({
-    //    type: 'POST',
-    //    url: '/FlashCard/Options',
-    //    data: $('form').serializeArray(),
-    //    dataType: 'html',
-    //    success: function (data) {
-    //        $('body').html(data);
-    //    },
-    //    failure: function (data) {
-    //        HandleError(null, "Unable to save all data.");
-    //    }
-    //});
-
     $.ajax({
         type: 'POST',
         url: '/FlashCard/Options',
         data: $('form').serializeArray(),
         dataType: 'html',
         success: function (data) {
-            var height = 1000;
-            var width = 1000;
-            var left = ((document.body.clientWidth - width) / 2);
-            var returnUrl = '/FlashCard/Options/Options.ascx';
             $.modal(data, {
-                closeHTML: "<span>X</span>",
+                onOpen: modalOpen,
                 containerCss: {
-                    backgroundColor: "#fff",
-                    borderColor: "#fff",
-                    height: 400,
+                    backgroundColor: "#C8C8C8",
+                    borderColor: "#C8C8C8",
+                    height: 450,
                     padding: 12,
-                    width: 830,
+                    width: 700,
                     borderRadius: 10
                 },
-                overlayClose: true,
                 overlayCss: {
                     backgroundColor: "#000"
                 }
@@ -99,5 +73,28 @@ ShowPopUp = function (symbol, maxNumber) {
             HandleError(null, "Unable to save all data.");
         }
     });
-    //window.showModalDialog('FlashCard/Options/10', "wndPopUp", 'width=1000,height=1000');
+}
+function modalOpen(dialog) {
+    var title = $('.options-title').html();
+    $('.options-title').html('Loading...');
+    dialog.overlay.fadeIn('slow', function () {
+        dialog.container.fadeIn('slow', function () {
+            dialog.data.hide().slideDown('slow', function () {
+                $('.options-title').html(title);
+            });
+        });
+    });
+}
+function modalClose(Dialog) {
+    Dialog = $('body');
+    $('.options-message').fadeOut();
+    $('.options-title').html('Goodbye...', function () {
+        dialog.data.fadeOut(200, function () {
+            dialog.container.fadeOut(200, function () {
+                dialog.overlay.fadeOut(200, function () {
+                    $.modal.close();
+                });
+            });
+        });
+    });
 }

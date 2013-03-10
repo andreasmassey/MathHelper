@@ -17,15 +17,8 @@
         </script>
     <div id="ContentPlaceHolder">
         <div class="Options-Button">
-            <%--<input type="image" name="options" onclick="<%: Html.Raw("ShowPopUp("+ Model.MathSymbol, Model.MaxNumber + ");") /> %>--%>
             <%= Html.Button(ButtonHelpers.Buttons.Options, "ShowPopUp", "Options", "Options", 30, "ShowPopUp(" + Model.MathSymbol + "," + Model.MaxNumber + ");")%>
         </div>
-
-        <div id="ex1" style="display:none;">
-    <p>Thanks for clicking.  That felt good.  <a href="#" rel="modal:close">Close</a> or press ESC</p>
-  </div>
-        <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
-
         <% using (Html.BeginForm())  { %>
         <div id="FlashCardContainer">  
                     <%: Html.HiddenFor(m => m.FirstNumber) %>
