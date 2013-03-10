@@ -62,6 +62,19 @@ namespace MathHelper.UI.Controllers
         }
 
         [HttpPost]
+        [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
+        public ActionResult SaveOptions(FlashCardViewModel model)
+        {
+            model.Answer = 0;
+            _random = new Random();
+            ModelState.Clear();
+            model.FirstNumber = RandomNumber(_random, model.MaxNumber);
+            model.SecondNumber = RandomNumber(_random, model.MaxNumber);
+            model.Answer = null;
+            return View("FlashCardIndex", model);
+        }
+
+        [HttpPost]
         public ActionResult Options(FlashCardViewModel model)
         {
             return View("Options", model);

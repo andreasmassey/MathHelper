@@ -121,6 +121,37 @@ hr {
 	position:relative;
 	top:1px;
 }.Options-Button {
-     float: right;
-     margin-right: 20px
+    float: right;
+    margin-right: 20px
+ }
+ .options-wrapper {
+    margin:0 auto;
+	text-align:left;
+	padding:20px;
+ }
+ .options-addition {
+     float: left;
+     margin-left: 10px;
+ }
+ .options-type {
+    float: left;
+ }
+ .options-type-name {
+    float: left;
+    margin-left: 20px;
+ }
+ .options-difficulty {
+     float: left;
+ }
+ .options-difficulty-first {
+    float: left;
+    margin-left: 20px;
+ }
+ .options-difficulty-name {
+    float: left;
+    margin-left: 60px;
+ }
+ .options-difficulty-last {
+     float: left;
+     margin-left: 53px;
  }

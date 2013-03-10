@@ -46,6 +46,23 @@ function Options() {
     });
 }
 
+function SaveOptions() {
+    $.ajax({
+        type: 'POST',
+        url: '/FlashCard/SaveOptions',
+        data: $.modal('form').serializeArray(),
+        dataType: 'html',
+        success: function (data) {
+            $.modal.close();
+            $('body').html(data);
+        },
+        failure: function (data) {
+            $.modal.close();
+            HandleError(null, "Unable to save all data.");
+        }
+    });
+}
+
 ShowPopUp = function (symbol, maxNumber) {
     $.ajax({
         type: 'POST',
@@ -55,12 +72,13 @@ ShowPopUp = function (symbol, maxNumber) {
         success: function (data) {
             $.modal(data, {
                 onOpen: modalOpen,
+                onClose: modalClose,
                 containerCss: {
                     backgroundColor: "#C8C8C8",
                     borderColor: "#C8C8C8",
-                    height: 450,
+                    height: 370,
                     padding: 12,
-                    width: 700,
+                    width: 600,
                     borderRadius: 10
                 },
                 overlayCss: {
@@ -85,15 +103,12 @@ function modalOpen(dialog) {
         });
     });
 }
-function modalClose(Dialog) {
-    Dialog = $('body');
-    $('.options-message').fadeOut();
-    $('.options-title').html('Goodbye...', function () {
-        dialog.data.fadeOut(200, function () {
-            dialog.container.fadeOut(200, function () {
-                dialog.overlay.fadeOut(200, function () {
-                    $.modal.close();
-                });
+function modalClose(dialog) {
+    $('.options-title').html('Goodbye...');
+    $(this).data.fadeOut(200, function () {
+        $(this).dialog.container.fadeOut(200, function () {
+            $(this).dialog.overlay.fadeOut(200, function () {
+                $.modal.close();
             });
         });
     });
