@@ -16,15 +16,18 @@
 .FirstNumber {
     font-size: 60pt;
     font-weight:bold;
+
 }
 .MathSymbol {
-    float:left;
-    font-size: 60pt;
-    margin-left:10px;
-    margin-top:15px;
+    position: absolute;
+    top: 405px;
+    padding-left: 20px;
+    font-size: 40pt;
+}
+#FlashCardTop {
+    height: 196px;
 }
 .SecondNumber {
-    margin-right:52px;
     margin-left:auto;
     margin-top:10px;
     font-size: 60pt;

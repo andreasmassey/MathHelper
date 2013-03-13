@@ -25,26 +25,31 @@
                     <%: Html.HiddenFor(m => m.MathSymbol) %>
                     <%: Html.HiddenFor(m => m.SecondNumber) %>
                     <%: Html.HiddenFor(m => m.MaxNumber) %>
-                <div class="FirstNumber"><%=Model.FirstNumber %></div>
-                <div class="MathSymbol">
-                    <% switch (Model.MathSymbol)
-                       {
-                           case 1:
-                               %> + <%
-                               break;
-                           case 2:
-                               %> - <%
-                               break;
-                           case 3:
-                               %> * <%
-                               break;
-                           case 4:
-                               %> / <%
-                                    break;
-                       }
-                    %>
+                <div id="FlashCardTop">
+                    <div class="FirstNumber"><%=Model.FirstNumber %></div>
+                    <div class="MathSymbol">
+                        <% switch (Model.MathSymbol)
+                           {
+                               case 1:
+                                   %> + <%
+                                   break;
+                               case 2:
+                                   %> - <%
+                                   break;
+                               case 3:
+                                   %> x <%
+                                   break;
+                               case 4:
+                                   %> / <%
+                                   break;
+                               case 5:
+                                   %> / <%
+                                   break;
+                           }
+                        %>
+                    </div>
+                    <div class="SecondNumber"><%=Model.SecondNumber %></div>
                 </div>
-                <div class="SecondNumber"><%=Model.SecondNumber %></div>
                 <hr/>                 
                  <div class="Validation"><%=Html.ValidationMessageFor(m => m.Answer) %></div>
             <%if (!Model.CorrectAnswer && Model.Answer != null)

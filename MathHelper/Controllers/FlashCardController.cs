@@ -48,6 +48,12 @@ namespace MathHelper.UI.Controllers
                     ModelState.Clear();
                     model.FirstNumber = RandomNumber(_random, model.MaxNumber);
                     model.SecondNumber = RandomNumber(_random, model.MaxNumber);
+
+                    while (model.SecondNumber > model.FirstNumber)
+                    {
+                        model.SecondNumber = RandomNumber(_random, model.MaxNumber);
+                    }
+
                     model.Answer = null;
 
                     return View("FlashCardIndex", model);
@@ -65,7 +71,7 @@ namespace MathHelper.UI.Controllers
         [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
         public ActionResult SaveOptions(FlashCardViewModel model)
         {
-            model.Answer = 0;
+            //var model = new FlashCardViewModel();
             _random = new Random();
             ModelState.Clear();
             model.FirstNumber = RandomNumber(_random, model.MaxNumber);

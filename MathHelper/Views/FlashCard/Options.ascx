@@ -3,13 +3,15 @@
 
 <div id="options-Container">
     <div class="options-container">
+        <%: Html.HiddenFor(m => m.MathSymbol) %>
+        <%: Html.HiddenFor(m => m.MaxNumber) %>
         <h2 class="options-title">Options:</h2>
         <div class='options-loading' style='display:none'></div>
         <div class='options-message' style='display:none'></div>
         <form>
             <div id ="options-header" class="Options" style="border:solid 1px black; background-color: #A0A0A0; width:99.5%; padding-left: 3px;">Type</div>
             <div id="fcOptions"  class="Options" style="border:solid 1px black; background-color: #E0E0E0; height: 60px; width:100%;">
-                <div class="options-wrapper">
+                <div id="Options-Math-Symbol"class="options-wrapper">
                     <div class="options-addition">Addition: </div>
                     <div class="options-type">
                         <%=Html.RadioButtonFor(i => Model.MathSymbol, 1, new { @class = "Addition" }) %>
@@ -28,7 +30,7 @@
                     </div>
                     <div class="options-type-name">Basic Division: </div>
                     <div class="options-type">
-                        <%=Html.RadioButtonFor(i => Model.MathSymbol, 5, new { @class = "BasicDivision" }) %>
+                        <%=Html.RadioButtonFor(i => Model.MathSymbol, 5, new { @class = "SimpleDivision" }) %>
                     </div>
                 </div>
             </div>

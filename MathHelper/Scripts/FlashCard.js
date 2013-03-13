@@ -47,10 +47,18 @@ function Options() {
 }
 
 function SaveOptions() {
+    var difficulty = document.getElementsByName("MaxNumber");
+    var maxNum = 0;
+    for (var x = 0; x < difficulty.length; x++) {
+        if (difficulty[x].checked) {
+            maxNum = difficulty[x].value;
+        }
+    }
     $.ajax({
         type: 'POST',
         url: '/FlashCard/SaveOptions',
-        data: $.modal('form').serializeArray(),
+        data: { MathSymbol: $("input:checked").val(), MaxNumber: maxNum },
+        //data: $('form').serializeArray(),
         dataType: 'html',
         success: function (data) {
             $.modal.close();
@@ -72,7 +80,6 @@ ShowPopUp = function (symbol, maxNumber) {
         success: function (data) {
             $.modal(data, {
                 onOpen: modalOpen,
-                onClose: modalClose,
                 containerCss: {
                     backgroundColor: "#C8C8C8",
                     borderColor: "#C8C8C8",
@@ -105,11 +112,11 @@ function modalOpen(dialog) {
 }
 function modalClose(dialog) {
     $('.options-title').html('Goodbye...');
-    $(this).data.fadeOut(200, function () {
-        $(this).dialog.container.fadeOut(200, function () {
-            $(this).dialog.overlay.fadeOut(200, function () {
+    //$(this).data.fadeOut(200, function () {
+    //    $(this).dialog.container.fadeOut(200, function () {
+    //        $(this).dialog.overlay.fadeOut(200, function () {
                 $.modal.close();
-            });
-        });
-    });
+    //        });
+    //    });
+    //});
 }
