@@ -85,8 +85,8 @@
 
             </div>
             <div id="options-buttons"  class="Options" style="float:right">
-            <%= Html.Button(ButtonHelpers.Buttons.Submit, "SaveOptions", "Submit", "SaveOptions", 50, "SaveOptions()")%>
-            <%= Html.Button(ButtonHelpers.Buttons.Submit, "Cancel", "Cancel", "Cancel", 50, "modalClose()")%>
+            <%= Html.Button(ButtonHelpers.Buttons.Submit, "SaveOptions", "simplemodal-close", "Submit", "SaveOptions", 50, "SaveOptions(this)")%>
+            <%= Html.Button(ButtonHelpers.Buttons.Submit, "Cancel", "simplemodal-close", "Cancel", "Cancel", 50, "")%>
             </div>
         </form>
     </div>
